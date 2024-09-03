@@ -15,7 +15,7 @@ class _Scearch_fildState extends State<Scearch_fild> {
     TextEditingController _scearch = TextEditingController();
     return Container(
         height: 50,
-        width: 342,
+        width: MediaQuery.of(context).size.width,
         child: TextFormField(
           controller: _scearch,
           decoration: InputDecoration(

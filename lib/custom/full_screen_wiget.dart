@@ -23,21 +23,23 @@ class _full_screen_widgetState extends State<full_screen_widget> {
   Widget build(BuildContext context) {
     return Container(
       height: 130,
-      width: 343,
+      width: MediaQuery.of(context).size.width,
       decoration:
           BoxDecoration(color: Wight, borderRadius: BorderRadius.circular(10)),
       child: Row(
         children: [
-          Container(
-            width: 162,
-            height: 131,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(10),
-                  bottomLeft: Radius.circular(10)),
-              image: DecorationImage(
-                image: AssetImage(widget.image),
-                fit: BoxFit.cover,
+          Expanded(
+            child: Container(
+              width: 162,
+              height: 131,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                    bottomLeft: Radius.circular(10)),
+                image: DecorationImage(
+                  image: AssetImage(widget.image),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),
@@ -49,25 +51,29 @@ class _full_screen_widgetState extends State<full_screen_widget> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 13, left: 13),
-                    child: Expanded(
-                        child: Text(
-                      widget.topLine,
-                      style: TextStyle(
-                          fontSize: 14, fontFamily: "OpenSans-Regular"),
-                    )),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 13, left: 13),
+                      child: Expanded(
+                          child: Text(
+                        widget.topLine,
+                        style: TextStyle(
+                            fontSize: 14, fontFamily: "OpenSans-Regular"),
+                      )),
+                    ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 14, left: 13),
-                    child: Expanded(
-                        child: Text(
-                      widget.bottomLime,
-                      style: TextStyle(
-                          fontSize: 12,
-                          fontFamily: "OpenSans-Bold",
-                          color: Primary),
-                    )),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 14, left: 13),
+                      child: Expanded(
+                          child: Text(
+                        widget.bottomLime,
+                        style: TextStyle(
+                            fontSize: 12,
+                            fontFamily: "OpenSans-Bold",
+                            color: Primary),
+                      )),
+                    ),
                   )
                 ],
               ),

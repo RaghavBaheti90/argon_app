@@ -20,11 +20,11 @@ class _large_screen_wigetState extends State<large_screen_wiget> {
   Widget build(BuildContext context) {
     return Container(
       height: 268,
-      width: 343,
+      width: MediaQuery.of(context).size.width,
       child: Column(
         children: [
           Container(
-            width: 343,
+            width: MediaQuery.of(context).size.width,
             height: 206,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
@@ -43,7 +43,7 @@ class _large_screen_wigetState extends State<large_screen_wiget> {
               color: Colors.white,
             ),
             height: 62,
-            width: 343,
+            width: MediaQuery.of(context).size.width,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -57,16 +57,18 @@ class _large_screen_wigetState extends State<large_screen_wiget> {
                         TextStyle(fontSize: 14, fontFamily: "OpenSans-Regular"),
                   )),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 13, bottom: 10),
-                  child: Expanded(
-                      child: Text(
-                    widget.bottomLime,
-                    style: TextStyle(
-                        fontSize: 12,
-                        fontFamily: "OpenSans-Bold",
-                        color: Primary),
-                  )),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 13, bottom: 10),
+                    child: Expanded(
+                        child: Text(
+                      widget.bottomLime,
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontFamily: "OpenSans-Bold",
+                          color: Primary),
+                    )),
+                  ),
                 )
               ],
             ),

@@ -32,19 +32,20 @@ class _home_page_uiState extends State<home_page_ui> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 75),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Side_text(Icon: "assets/icons/Diamond.png", text: "Music"),
-                    Expanded(
-                      child: SizedBox(
-                        width: 42,
-                      ),
-                    ),
+                    // Expanded(
+                    //   child: SizedBox(
+                    //     width: 42,
+                    //   ),
+                    // ),
                     Text("|"),
-                    Expanded(
-                      child: SizedBox(
-                        width: 42,
-                      ),
-                    ),
+                    // Expanded(
+                    //   child: SizedBox(
+                    //     width: 42,
+                    //   ),
+                    // ),
                     Side_text(Icon: "assets/icons/basket.png", text: "Fashion"),
                   ],
                 ),
@@ -92,10 +93,14 @@ class _home_page_uiState extends State<home_page_ui> {
                 SizedBox(
                   height: 15,
                 ),
-                full_screen_widget(
-                    bottomLime: "View article",
-                    image: "assets/images/demo3.png",
-                    topLine: "Fashion is a popular style, especially in …"),
+                Padding(
+                  padding:
+                      EdgeInsets.only(left: 18, top: 0, bottom: 20, right: 18),
+                  child: full_screen_widget(
+                      bottomLime: "View article",
+                      image: "assets/images/demo3.png",
+                      topLine: "Fashion is a popular style, especially in …"),
+                ),
                 SizedBox(
                   height: 15,
                 ),

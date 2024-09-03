@@ -126,7 +126,8 @@ class _Shoes_screen_uiState extends State<Shoes_screen_ui> {
                       height: 14,
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 16),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 16, horizontal: 15),
                       child: large_screen_wiget(
                           bottomLime: "View article",
                           image: "assets/images/demo12.png",

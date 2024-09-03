@@ -25,7 +25,7 @@ class _hafe_scrren_wigitState extends State<hafe_scrren_wigit> {
         child: Column(
           children: [
             Container(
-              width: 164,
+              width: MediaQuery.of(context).size.width,
               height: 117,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
@@ -45,7 +45,7 @@ class _hafe_scrren_wigitState extends State<hafe_scrren_wigit> {
                 color: Colors.white,
               ),
               height: 95,
-              width: 164,
+              width: MediaQuery.of(context).size.width,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -59,16 +59,18 @@ class _hafe_scrren_wigitState extends State<hafe_scrren_wigit> {
                           fontSize: 14, fontFamily: "OpenSans-Regular"),
                     )),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 14, left: 13),
-                    child: Expanded(
-                        child: Text(
-                      widget.bottomLime,
-                      style: TextStyle(
-                          fontSize: 12,
-                          fontFamily: "OpenSans-Bold",
-                          color: Primary),
-                    )),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 14, left: 13),
+                      child: Expanded(
+                          child: Text(
+                        widget.bottomLime,
+                        style: TextStyle(
+                            fontSize: 12,
+                            fontFamily: "OpenSans-Bold",
+                            color: Primary),
+                      )),
+                    ),
                   )
                 ],
               ),
